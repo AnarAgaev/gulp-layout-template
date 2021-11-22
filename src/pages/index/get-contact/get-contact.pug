@@ -1,0 +1,25 @@
+section#getContact.step.step_invisible.hidden
+    .step__wrap
+        .container
+            .row
+                .col-12
+                    .loading-bar
+
+        .container
+            .row
+                .col-12
+                    form#getContactForm.get-contact-form(action="/" method="get")
+                        .get-contact-form__contact-type
+                            label
+                                input.invisible(type="radio" name="contact-type" value="whatsapp")
+                            label
+                                input.invisible(type="radio" name="contact-type" value="telegram")
+                            label
+                                input.invisible(type="radio" name="contact-type" value="phone")
+
+                        .get-contact-form__phone
+                            label
+                                input(type="tel" name="phone" value="" placeholder="Ваш номер телефона")
+
+                        .get-contact-form__submit
+                            button(type="submit") Получить результат
