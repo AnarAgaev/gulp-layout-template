@@ -73,6 +73,7 @@ function buildJs() {
         'src/templates/default/js/main.js',
         'src/templates/default/header/header.js',
         'src/templates/default/footer/footer.js',
+        'src/pages/**/*.js'
     ])
         .pipe(sourcemaps.init())
         .pipe(rename({
