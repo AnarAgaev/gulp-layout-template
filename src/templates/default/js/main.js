@@ -62,6 +62,14 @@ const phoneMaskOptions = {
     placeholderChar: '_'
 };
 
-$(document).ready(function () {
+$(document).ready(() => {
 
+    // Блокируем отправку всех форм.
+    // Данные всегда отправляются асинхронно.
+    $('form').submit(e => {
+        e.preventDefault();
+    });
 });
+
+
+

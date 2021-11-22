@@ -1,17 +1,20 @@
-section#questionThree.step.step_invisible.hidden
+section#questionThree.step.hidden(
+    data-this-step-id="questionThree"
+    data-next-step-id="questionFour"
+    data-prev-step-id="questionTwo")
     .step__wrap
-        .container
+        .container.animation-element
             .row
                 .col-12
                     h3.section__title Заголовок третьего вопроса
 
-        .container
+        .container.animation-element
             .row
                 .col-12
                     p Содержание третьего вопроса
 
-        .container
+        .container.animation-element
             .row
                 .col-12
-                    button.btn.btn_next Назад
-                    button.btn.btn_next Далеше
+                    button.btn.btn_prev-step Назад
+                    button.btn.btn_next-step Далеше

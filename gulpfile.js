@@ -71,6 +71,7 @@ function buildJs() {
     return src([
         'src/templates/default/js/jquery-3.6.0.min.js',
         'src/templates/default/js/main.js',
+        'src/templates/default/js/toggle-steps.js',
         'src/templates/default/header/header.js',
         'src/templates/default/footer/footer.js',
         'src/pages/**/*.js'

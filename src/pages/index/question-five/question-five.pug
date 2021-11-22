@@ -1,17 +1,20 @@
-section#questionFive.step.step_invisible.hidden
+section#questionFive.step.hidden(
+    data-this-step-id="questionFive"
+    data-next-step-id="getContact"
+    data-prev-step-id="questionFour")
     .step__wrap
-        .container
+        .container.animation-element
             .row
                 .col-12
                     h3.section__title Заголовок пятого вопроса
 
-        .container
+        .container.animation-element
             .row
                 .col-12
                     p Содержание пятого вопроса
 
-        .container
+        .container.animation-element
             .row
                 .col-12
-                    button.btn.btn_next Назад
-                    button.btn.btn_next Далеше
+                    button.btn.btn_prev-step Назад
+                    button.btn.btn_next-step Далеше

@@ -1,11 +1,19 @@
-section#getContact.step.step_invisible.hidden
+section#getContact.step.hidden(
+    data-this-step-id="getContact"
+    data-next-step-id="results"
+    data-prev-step-id="questionFive")
     .step__wrap
-        .container
+        .container.animation-element
             .row
                 .col-12
                     .loading-bar
 
-        .container
+        .container.animation-element
+            .row
+                .col-12
+                    h3.section__title Заголовок блока зазвата контактов
+
+        .container.animation-element
             .row
                 .col-12
                     form#getContactForm.get-contact-form(action="/" method="get")
@@ -22,4 +30,4 @@ section#getContact.step.step_invisible.hidden
                                 input(type="tel" name="phone" value="" placeholder="Ваш номер телефона")
 
                         .get-contact-form__submit
-                            button(type="submit") Получить результат
+                            button.btn_next-step(type="submit") Получить результат
