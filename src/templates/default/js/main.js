@@ -19,24 +19,22 @@ window.validatePhone = phone => {
 };
 
 // В суперглобальной переменной храним все дынные, введенные пользователем
-window.STATE = {
+window.STORE = {
     connect: "WhatsApp",
 };
 
 // С помощью проксирования слушаем изменение стэйта
-STATE = new Proxy(STATE, {
+STORE = new Proxy(STORE, {
     set: function (target, prop, val) {
 
         target[prop] = val;
 
         /*
-         * Если в стейте меняется телефон, то сразу меняем
+         * Если в СТОРЕ меняется телефон, то сразу меняем
          * телефон во всех полях ввода телефона.
          */
         if (prop === 'phone') {
-            for (let i = 0; i < PHONE_MASKS.length; i++) {
-                PHONE_MASKS[i].unmaskedValue = val;
-            }
+            updatePhones(val);
         }
 
 
@@ -47,6 +45,12 @@ STATE = new Proxy(STATE, {
         return true;
     }
 });
+
+const updatePhones = (phone) => {
+    for (let i = 0; i < PHONE_MASKS.length; i++) {
+        PHONE_MASKS[i].unmaskedValue = phone;
+    }
+}
 
 // Маски для всех телефонов сохраняем в отдельный суперглобальный массив
 const PHONE_MASKS = [];

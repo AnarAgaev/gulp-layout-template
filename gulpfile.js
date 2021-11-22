@@ -19,7 +19,7 @@ function clean() {
 }
 
 function buildStyles() {
-    return src('src/**/main.sass', { sourcemaps: true })
+    return src('src/**/main.scss', { sourcemaps: true })
         .pipe(plumber({
             errorHandler: notify.onError( function(err){
                 return {
@@ -105,7 +105,7 @@ function server() {
 }
 
 // Watches
-watch('src/**/*.sass', buildStyles);
+watch('src/**/*.scss', buildStyles);
 watch('src/**/*.pug', buildHtml);
 watch('src/**/*.js', buildJs);
 watch('src/fonts/**/*', buildFonts);
